@@ -151,6 +151,12 @@
 
 {{ partial "mathjax.html" . }}
 
+{{ partial "google/analytics.html" . }}
+<!-- layouts/partials/math.html -->
+{{ if or .Params.math .Site.Params.math }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+{{ end }}
+
 {{- /* Misc */}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 {{- template "_internal/google_analytics.html" . }}
