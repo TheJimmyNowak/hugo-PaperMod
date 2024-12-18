@@ -148,9 +148,9 @@
 
 {{- partial "extend_head.html" . -}}
 {{ partial "google/analytics.html" . }}
-
+{{ partial "cookies.html" . }}
 {{ partial "mathjax.html" . }}
-
+{{ partial "mailerlite.html" . }}
 {{ partial "google/analytics.html" . }}
 <!-- layouts/partials/math.html -->
 {{ if or .Params.math .Site.Params.math }}
